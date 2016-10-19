@@ -1,7 +1,7 @@
-# passport-lti
-
-[![Build Status](https://travis-ci.org/civitaslearning/passport-lti.svg)](https://travis-ci.org/civitaslearning/passport-lti)
-[![npm version](https://badge.fury.io/js/passport-lti.svg)](http://badge.fury.io/js/passport-lti)
+# papers-lti
+[![Build Status](https://travis-ci.org/reharik/papers-lti.svg)](https://travis-ci.org/reharik/papers-lti)
+[![Code Climate](https://codeclimate.com/github/reharik/papers-lti/badges/gpa.svg)](https://codeclimate.com/github/reharik/papers-lti)
+[![Test Coverage](https://codeclimate.com/github/reharik/papers-lti/badges/coverage.svg)](https://codeclimate.com/github/reharik/papers-lti/coverage)
 
 Passport-flavored LTI authentication middleware for express.
 
@@ -35,8 +35,8 @@ Options :
 ### With hardcoded key / secret
 
 ```javascript
-var passport = require('passport');
-var LTIStrategy = require('passport-lti');
+var papers = require('papers');
+var LTIStrategy = require('papers-lti');
 var strategy = new LTIStrategy({
 	consumerKey: 'testconsumerkey',
 	consumerSecret: 'testconsumersecret'
@@ -50,15 +50,15 @@ var strategy = new LTIStrategy({
 	// Perform local authentication if necessary
 	return done(null, user);
 });
-passport.use(strategy);
+papers.use(strategy);
 ```
 
 ### With dynamic provider
 
 ```javascript
-var passport = require('passport');
+var papers = require('papers');
 var lti = require("ims-lti");
-var LTIStrategy = require('passport-lti');
+var LTIStrategy = require('papers-lti');
 var strategy = new LTIStrategy({
 	createProvider : function (req, done) {
 		// Lookup your LTI customer in your DB with req's params, and get its secret
@@ -84,7 +84,7 @@ var strategy = new LTIStrategy({
 	}
 );
 
-passport.use(strategy);
+papers.use(strategy);
 ```
 ## Tests
 

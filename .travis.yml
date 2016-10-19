@@ -3,4 +3,4 @@ node_js:
   - "6"
 after_success:
   - npm install codeclimate-test-reporter
-  - codeclimate-test-reporter < coverage/lcov.info
+  - CODECLIMATE_REPO_TOKEN=9b93328a5583af7bdd59a17d0b18e6bdd748b58956a9cc4fbabe22ea90f91f52 codeclimate-test-reporter < coverage/lcov.info

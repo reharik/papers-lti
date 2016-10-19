@@ -1,5 +1,5 @@
 languages:
    JavaScript: true
 exclude_paths:
-- "tests/*"
+- "test/*"
 - "output/*"
