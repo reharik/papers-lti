@@ -8,8 +8,8 @@
     "lti"
   ],
   "author": {
-    "name": "Lewis Zhang",
-    "email": "lewiszhang@gmail.com"
+    "name": "Raif Harik",
+    "email": "reharik@gmail.com"
   },
   "engines": {
     "node": ">=4.0.0"
@@ -27,8 +27,7 @@
       "url": "http://www.opensource.org/licenses/MIT"
     }
   ],
-  "dependencies": {},
-  "peerDependencies": {
+  "dependencies": {
     "ims-lti": "3.0.x"
   },
   "main": "./lib/strategy",
@@ -39,7 +38,7 @@
     "babel-register": "^6.14.0",
     "chai": "^1.9.1",
     "co": "^4.6.0",
-    "ims-lti": "3.0.x",
+    "istanbul": "^1.1.0-alpha.1",
     "mocha": "^2.0.0"
   },
   "scripts": {
